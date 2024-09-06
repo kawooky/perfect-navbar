@@ -1,80 +1,14 @@
-@import "../../root.css";
-
 .home {
-  box-sizing: border-box;
-}
-
-.hero {
-  height: 92vh;
+  height: 3000px;
   width: 100vw;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  background-color: aquamarine;
+  padding: 0px;
+  margin: 0px;
 }
 
-.hero-info-container {
-  flex: 1;
-  box-sizing: border-box;
-  width: 100vw;
-  /* margin: -2; */
-}
-
-.hero-info-container-row {
-  height: 100%;
-  width: 100vw;
-  /* margin: -2; */
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  color: var(--one);
-  /* background-color: #3498db; */
-}
-
-.buttons {
-  width: 110px;
-}
-
-.border {
-  border: 2px solid #3498db;
-}
-
-.about {
-  /* max-width: 100%; */
-  /* min-height: 15vh; */
-  background-color: var(--four);
-  /* display: flex; */
-  /* align-items: center; */
-  /* box-sizing: border-box; */
-}
-
-.background-video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.skill-box-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-
-.skill-box {
-  border: 2px solid var(--three);
-  background-color: var(--three);
-  /* border-radius: 5px; */
-  padding: 10px;
-  /* margin-bottom: 10px;  */
-  width: auto;
-}
-
-.projects {
-  /* max-width: 100%; */
-  /* min-height: 15vh; */
-  background-color: var(--four);
-  /* display: flex; */
-  /* align-items: center; */
-  /* box-sizing: border-box; */
+h1 {
+  padding: 0px;
+  margin: 0px;
+  background-color: beige;
+  color: blueviolet;
 }

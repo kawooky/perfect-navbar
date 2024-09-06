@@ -9,6 +9,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  z-index: 1000;
+}
+
+/* Prevent page from scrolling when the menu is open */
+.no-scroll {
+  overflow: hidden;
 }
 
 .navbar h1,
@@ -70,6 +76,7 @@
     overflow: hidden;
     height: 0;
     transition: height 0.3s ease;
+    z-index: 999;
   }
 
   .links.show {

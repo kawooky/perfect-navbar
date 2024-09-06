@@ -1,13 +1,28 @@
 import styles from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
+    window.scrollTo(0, 0);
     setMenuOpen(!menuOpen);
   };
+
+  // Effect to add or remove the no-scroll class
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add(styles["no-scroll"]);
+    } else {
+      document.body.classList.remove(styles["no-scroll"]);
+    }
+
+    // Clean up the effect to ensure the no-scroll class is removed when the component unmounts
+    return () => {
+      document.body.classList.remove(styles["no-scroll"]);
+    };
+  }, [menuOpen]);
 
   return (
     <div className={styles.navbar}>
