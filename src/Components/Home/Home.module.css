@@ -1,7 +1,7 @@
 .home {
   height: 3000px;
   width: 100vw;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   padding: 0px;
   margin: 0px;
 }
@@ -9,6 +9,6 @@
 h1 {
   padding: 0px;
   margin: 0px;
-  background-color: beige;
-  color: blueviolet;
+  /* background-color: beige;
+  color: blueviolet; */
 }

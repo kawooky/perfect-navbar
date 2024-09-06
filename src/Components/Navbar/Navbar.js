@@ -1,16 +1,20 @@
-import styles from "./Navbar.module.css";
-import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import styles from "./Navbar.module.css";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
+    // Scroll to the top of the page before opening the menu
     window.scrollTo(0, 0);
     setMenuOpen(!menuOpen);
   };
 
-  // Effect to add or remove the no-scroll class
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   useEffect(() => {
     if (menuOpen) {
       document.body.classList.add(styles["no-scroll"]);
@@ -41,6 +45,7 @@ export const Navbar = () => {
           className={({ isActive }) =>
             isActive ? styles["active-nav-link"] : styles["nav-link"]
           }
+          onClick={closeMenu} // Close menu when clicked
         >
           Home
         </NavLink>
@@ -49,6 +54,7 @@ export const Navbar = () => {
           className={({ isActive }) =>
             isActive ? styles["active-nav-link"] : styles["nav-link"]
           }
+          onClick={closeMenu} // Close menu when clicked
         >
           Projects
         </NavLink>
@@ -57,6 +63,7 @@ export const Navbar = () => {
           className={({ isActive }) =>
             isActive ? styles["active-nav-link"] : styles["nav-link"]
           }
+          onClick={closeMenu} // Close menu when clicked
         >
           L3
         </NavLink>
@@ -65,6 +72,7 @@ export const Navbar = () => {
           className={({ isActive }) =>
             isActive ? styles["active-nav-link"] : styles["nav-link"]
           }
+          onClick={closeMenu} // Close menu when clicked
         >
           L4
         </NavLink>
